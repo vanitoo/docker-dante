@@ -1,8 +1,11 @@
-dante:
-    image: adegtyarev/dante
+version: '3.8'
+
+services:
+  dante:
+    image:   adegtyarev/dante
     command: sockd-username
     environment:
-        SOCKD_USER_NAME: $SOCKD_USER_NAME
+        SOCKD_USER_NAME:     $SOCKD_USER_NAME
         SOCKD_USER_PASSWORD: $SOCKD_USER_PASSWORD
     ports:
         - $SOCKD_PORT:1080
